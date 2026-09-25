@@ -1,0 +1,1674 @@
+@import url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Permanent+Marker&display=swap");
+
+:root {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: #f5f7f7;
+  background: #111413;
+  font-synthesis: none;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #80c8ff;
+  outline-offset: 4px;
+}
+
+.pular-conteudo {
+  position: fixed;
+  top: -80px;
+  left: 12px;
+  z-index: 100;
+  padding: 12px;
+  background: #2196f3;
+}
+
+.pular-conteudo:focus {
+  top: 12px;
+}
+
+.secao {
+  padding-right: max(7vw, 24px);
+  padding-left: max(7vw, 24px);
+}
+
+.escrita-azul {
+  color: #70c1ff;
+  font-family: "Permanent Marker", cursive;
+    font-size: clamp(1.35rem, 1.2rem + 0.5vw, 1.6rem);
+}
+
+/* MENU */
+
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  min-height: 76px;
+  padding: 15px max(7vw, 24px);
+  border-bottom: 1px solid #ffffff20;
+  background: #111413ed;
+  backdrop-filter: blur(12px);
+}
+
+.marca {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+}
+
+.marca span,
+.inicio-lateral h2 span,
+.rodape h2 span {
+  color: #2196f3;
+}
+
+.cabecalho nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.cabecalho nav a {
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.cabecalho nav a:hover,
+.links-rodape a:hover {
+  color: #70c1ff;
+}
+
+/* PERSONAGEM */
+
+.personagem {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1145 / 1373;
+  min-width: 0;
+  filter: drop-shadow(0 25px 35px #0008);
+}
+
+.personagem img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.pose-frente {
+  animation: olhar-frente 9s ease-in-out infinite;
+}
+
+.pose-digitando {
+  animation: olhar-teclado 9s ease-in-out infinite;
+}
+
+@keyframes olhar-frente {
+  0%, 35%, 90%, 100% { opacity: 1; }
+  47%, 76% { opacity: 0; }
+}
+
+@keyframes olhar-teclado {
+  0%, 35%, 90%, 100% { opacity: 0; }
+  47%, 76% { opacity: 1; }
+}
+
+/* ABERTURA */
+
+.inicio {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 0.9fr;
+  align-items: center;
+  min-height: 760px;
+  overflow: hidden;
+  border-bottom: 1px solid #ffffff20;
+}
+
+.inicio-texto,
+.inicio-lateral {
+  position: relative;
+  z-index: 2;
+}
+
+.inicio-texto h1 {
+  margin: 17px 0 25px;
+  font-size: clamp(3.4rem, 6vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -0.075em;
+}
+
+.inicio-texto h1 span {
+  font-weight: 400;
+}
+
+.inicio-texto p {
+  color: #cbd4cf;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.link-destaque {
+  display: inline-block;
+  margin-top: 22px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2196f3;
+  font-weight: 700;
+}
+
+.link-destaque:hover {
+  color: #70c1ff;
+}
+
+.personagem-inicio {
+  width: min(48vw, 680px);
+  align-self: end;
+  margin-right: -7vw;
+  margin-left: -7vw;
+}
+
+.inicio-lateral h2 {
+  margin: 16px 0;
+  font-size: clamp(2.2rem, 3.6vw, 4.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.06em;
+}
+
+.inicio-lateral p {
+  color: #a4b1a8;
+}
+
+.indicacao-rolagem {
+  position: absolute;
+  bottom: 28px;
+  left: max(7vw, 24px);
+  color: #a4b1a8;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+}
+
+/* SOBRE */
+
+.sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5vw;
+  min-height: 760px;
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+.sobre-texto {
+  max-width: 650px;
+}
+
+.sobre-texto h2 {
+  margin: 20px 0 30px;
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  line-height: 1.06;
+  letter-spacing: -0.06em;
+}
+
+.sobre-texto h2 em,
+.titulo-secao h2 em {
+  color: #2196f3;
+  font-style: normal;
+}
+
+.sobre-texto p {
+  color: #d4dcd7;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.personagem-sobre {
+  width: min(47vw, 700px);
+  align-self: end;
+}
+
+.cena-personagem {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 750px;
+  overflow: hidden;
+  border-top: 1px solid #ffffff15;
+  border-bottom: 1px solid #ffffff15;
+  background: radial-gradient(ellipse at 50% 70%, #26333b, #111413 70%);
+}
+
+.personagem-grande {
+  width: min(65vw, 780px);
+  margin-bottom: -80px;
+}
+
+.cena-personagem > p {
+  position: absolute;
+  right: 7vw;
+  bottom: 45px;
+  max-width: 420px;
+  margin: 0;
+  color: #00ffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: right;
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+}
+
+/* O QUE FAÇO */
+
+.atuacao {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 0.95fr;
+  align-items: center;
+  gap: 2vw;
+  min-height: 750px;
+  overflow: hidden;
+}
+
+.atuacao-titulo h2 {
+  font-size: clamp(3rem, 5vw, 6rem);
+  line-height: 1;
+  letter-spacing: -0.07em;
+}
+
+.atuacao-titulo h2 span {
+  color: #2196f3;
+}
+
+.personagem-atuacao {
+  width: min(40vw, 580px);
+  align-self: end;
+  margin-left: -4vw;
+}
+
+.atuacao-cards {
+  display: grid;
+  gap: 18px;
+}
+
+.atuacao-cards article {
+  padding: 25px;
+  border: 1px solid #ffffff2a;
+  border-radius: 8px;
+  background: #1c2422;
+}
+
+.atuacao-cards article > span {
+  color: #70c1ff;
+  font-weight: 800;
+}
+
+.atuacao-cards h3 {
+  margin: 12px 0;
+}
+
+.atuacao-cards p {
+  color: #c5d1ca;
+  line-height: 1.6;
+}
+
+.atuacao-cards a {
+  color: #80c8ff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* CARREIRA */
+
+.carreira {
+  padding-top: 130px;
+  padding-bottom: 140px;
+  background: #151a18;
+}
+
+.titulo-secao {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.titulo-secao h2 {
+  margin: 12px 0;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  line-height: 1.05;
+  letter-spacing: -0.075em;
+}
+
+.titulo-secao p {
+  color: #abbab0;
+  font-size: 1.1rem;
+}
+
+.linha-do-tempo {
+  max-width: 1100px;
+  margin: auto;
+  border-top: 1px solid #39443d;
+}
+
+.marco {
+  display: grid;
+  grid-template-columns: 190px 1fr 1.2fr;
+  gap: 25px;
+  padding: 30px 0;
+  border-bottom: 1px solid #39443d;
+}
+
+.periodo {
+  color: #76c5ff;
+  font-weight: 700;
+}
+
+.marco h3 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+
+.local {
+  color: #a3b8aa;
+  font-size: 0.92rem;
+}
+
+.marco p {
+  margin: 0;
+  color: #c2cec5;
+  line-height: 1.6;
+}
+
+/* PROJETOS */
+
+.projetos {
+  padding-top: 120px;
+  padding-bottom: 130px;
+}
+
+.projetos-topo {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.projetos-topo h2 {
+  margin: 10px 0;
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  letter-spacing: -0.07em;
+}
+
+.projetos-topo h2 em {
+  color: #f5f7f7;
+  font-family: "Permanent Marker", cursive;
+  font-size: 0.8em;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-color: #8d6650;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 10px;
+}
+
+.botoes-projetos {
+  display: flex;
+  gap: 10px;
+}
+
+.botoes-projetos button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #526259;
+  border-radius: 50%;
+  background: #202822;
+  color: white;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.botoes-projetos button:hover {
+  border-color: #2196f3;
+  background: #2196f3;
+}
+
+.dica-projetos {
+  max-width: 1400px;
+  margin: 8px auto 25px;
+  color: #acb8ae;
+}
+
+.lista-projetos {
+  display: flex;
+  gap: 20px;
+  max-width: 1400px;
+  margin: auto;
+  padding-bottom: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: #2196f3 #263129;
+}
+
+.cartao-projeto {
+  display: flex;
+  flex: 0 0 min(410px, 85vw);
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #354139;
+  border-radius: 9px;
+  background: #1c231e;
+  scroll-snap-align: start;
+}
+
+.capa-projeto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  height: 210px;
+  margin: 13px 13px 0;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.capa-projeto span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.capa-projeto strong {
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.capa-01 {
+  background: #e7f4ff;
+  color: #17354a;
+}
+
+.capa-02 {
+  background: #dff4ea;
+  color: #1c4735;
+}
+
+.capa-03 {
+  background: #171717;
+  color: #fff;
+}
+
+.cartao-conteudo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px 22px 25px;
+}
+
+.numero-projeto {
+  color: #a3b3a5;
+  font-size: 0.75rem;
+}
+
+.cartao-conteudo h3 {
+  margin: 10px 0 2px;
+  font-size: 1.6rem;
+}
+
+.categoria-projeto {
+  color: #70c1ff !important;
+  font-family: "Permanent Marker", cursive;
+}
+
+.cartao-conteudo p {
+  color: #c4cfc7;
+  line-height: 1.55;
+}
+
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 12px 0 22px;
+}
+
+.etiquetas span {
+  padding: 6px 10px;
+  border: 1px solid #526057;
+  border-radius: 20px;
+  font-size: 0.78rem;
+}
+
+.cartao-conteudo > a,
+.sem-link {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #39443d;
+}
+
+.cartao-conteudo > a {
+  color: #80c8ff;
+  font-weight: 700;
+}
+
+.sem-link {
+  color: #aab5ac;
+}
+
+/* TECNOLOGIAS E CONTATO */
+
+.tecnologias {
+  padding-top: 105px;
+  padding-bottom: 130px;
+  border-top: 1px solid #303b33;
+  text-align: center;
+}
+
+.tecnologias h2 {
+  margin: 12px 0 38px;
+  font-size: clamp(2.5rem, 4vw, 4.2rem);
+  letter-spacing: -0.05em;
+}
+
+.lista-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  max-width: 950px;
+  margin: auto;
+}
+
+.lista-tecnologias span {
+  padding: 15px 20px;
+  border: 1px solid #445249;
+  border-radius: 40px;
+  background: #1c251f;
+}
+
+.rodape {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 0.8fr;
+  align-items: center;
+  gap: 35px;
+  min-height: 340px;
+  border-top: 1px solid #303b33;
+}
+
+.rodape h2 {
+  margin: 12px 0;
+  font-size: 3rem;
+}
+
+.rodape div:first-child > a {
+  font-size: 1.25rem;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.rodape p {
+  color: #acb8ae;
+}
+
+.links-rodape {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .cabecalho {
+    gap: 20px;
+  }
+
+  .cabecalho nav {
+    gap: 12px;
+  }
+
+  .inicio {
+    min-height: 650px;
+  }
+
+  .atuacao {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .atuacao-titulo {
+    grid-column: 1;
+  }
+
+  .personagem-atuacao {
+    grid-column: 1;
+    grid-row: 2;
+    width: 46vw;
+  }
+
+  .atuacao-cards {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+}
+
+/* CELULAR */
+
+@media (max-width: 760px) {
+  .secao {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .cabecalho {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 20px;
+  }
+
+  .cabecalho nav {
+    width: 100%;
+    gap: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 5px;
+  }
+
+  .cabecalho nav a {
+    font-size: 0.82rem;
+  }
+
+  .inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    padding-top: 65px;
+  }
+
+  .inicio-texto h1 {
+    font-size: clamp(3.4rem, 12vw, 5.5rem);
+  }
+
+  .personagem-inicio {
+    width: 95vw;
+    align-self: center;
+    margin: 15px 0 0;
+  }
+
+  .inicio-lateral {
+    margin: -20px 0 85px;
+  }
+
+  .inicio-lateral h2 {
+    font-size: 2.2rem;
+  }
+
+  .indicacao-rolagem {
+    left: 22px;
+  }
+
+  .sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 90px;
+  }
+
+  .sobre-texto h2 {
+    font-size: 3rem;
+  }
+
+  .personagem-sobre {
+    width: 90vw;
+    align-self: center;
+  }
+
+  .cena-personagem {
+    min-height: 500px;
+  }
+
+  .personagem-grande {
+    width: min(95vw, 600px);
+    margin-bottom: 0;
+  }
+
+  .cena-personagem > p {
+    right: 20px;
+    bottom: 15px;
+    max-width: 180px;
+    font-size: 0.9rem;
+  }
+
+  .atuacao {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 95px;
+  }
+
+  .atuacao-titulo h2 {
+    font-size: 3.3rem;
+  }
+
+  .personagem-atuacao {
+    width: min(90vw, 520px);
+    align-self: center;
+    margin: -20px auto;
+  }
+
+  .atuacao-cards {
+    margin-bottom: 80px;
+  }
+
+  .carreira,
+  .projetos {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+
+  .titulo-secao {
+    margin-bottom: 45px;
+  }
+
+  .marco {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 25px 0;
+  }
+
+  .projetos-topo h2 {
+    font-size: 3rem;
+  }
+
+  .rodape {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+}
+
+/* Respeita a preferência de reduzir movimento */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  .pose-frente,
+  .pose-digitando {
+    animation: none;
+  }
+
+  .pose-frente {
+    opacity: 1;
+  }
+
+  .pose-digitando {
+    opacity: 0;
+  }
+}
+
+/* Ícones e nomes das tecnologias */
+.lista-tecnologias > * {
+  min-width: 100px;
+  min-height: 70px;
+  padding: 16px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #2196f3;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(33, 150, 243, 0.35);
+  font-size: 1.05rem;
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.lista-tecnologias > *:hover {
+  background-color: #2196f3;
+  color: #fff;
+  box-shadow: 0 0 22px rgba(33, 150, 243, 0.7);
+  transform: translateY(-4px);
+}
+
+.lista-tecnologias svg,
+.lista-tecnologias i {
+  width: 28px;
+  height: 28px;
+  font-size: 28px;
+}
+
+.lista-tecnologias > span {
+  width: 110px;
+  height: 110px;
+  min-width: 110px;
+  min-height: 110px;
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border: 2px solid #2196f3;
+  border-radius: 0;
+  box-shadow: 0 0 12px rgba(33, 150, 243, 0.45);
+  background-color: transparent;
+
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.lista-tecnologias > span:hover {
+  background-color: #2196f3;
+  color: #fff;
+  box-shadow: 0 0 22px rgba(33, 150, 243, 0.75);
+}
+
+/* Quadrados com fio azul luminoso */
+.lista-tecnologias > span {
+  width: 110px;
+  height: 110px;
+  min-width: 110px;
+  min-height: 110px;
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #fff;
+
+  background:
+    linear-gradient(#141817, #141817) padding-box,
+    linear-gradient(135deg, #00c8ff, #087cff, #0055ff, #00c8ff) border-box;
+
+  box-shadow:
+    0 0 8px #008cff,
+    0 0 20px rgba(0, 140, 255, 0.65),
+    inset 0 0 10px rgba(0, 140, 255, 0.15);
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.lista-tecnologias > span:hover {
+  background: #087cff;
+  color: #fff;
+  box-shadow:
+    0 0 12px #00c8ff,
+    0 0 30px #087cff,
+    0 0 45px rgba(0, 140, 255, 0.7);
+  transform: translateY(-4px);
+}
+
+/* Fio azul elétrico nos cartões */
+.atuacao-cards article,
+.cartao-projeto {
+  border: 2px solid transparent;
+  border-radius: 0;
+  background:
+    linear-gradient(#1b201e, #1b201e) padding-box,
+    linear-gradient(135deg, #00c8ff, #087cff, #0055ff, #00c8ff) border-box;
+  box-shadow:
+    0 0 8px rgba(0, 140, 255, 0.55),
+    0 0 18px rgba(0, 140, 255, 0.3);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.atuacao-cards article:hover,
+.cartao-projeto:hover {
+  box-shadow:
+    0 0 12px #00c8ff,
+    0 0 28px rgba(8, 124, 255, 0.8);
+  transform: translateY(-4px);
+}
+
+/* Título da carreira: suave até passar o mouse */
+.carreira .titulo-secao h2 {
+  color: #aeb7c2;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.carreira .titulo-secao h2 em {
+  color: #6b9fc7;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.carreira .titulo-secao:hover h2 {
+  color: #ffffff;
+  text-shadow: 0 0 14px rgba(33, 150, 243, 0.55);
+}
+
+.carreira .titulo-secao:hover h2 em {
+  color: #2196f3;
+  text-shadow: 0 0 16px rgba(33, 150, 243, 0.85);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atuacao-cards article,
+  .cartao-projeto,
+  .carreira .titulo-secao h2,
+  .carreira .titulo-secao h2 em {
+    transition: none;
+  }
+}
+
+.carreira .titulo-secao h2 {
+  transform: scale(1);
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.carreira .titulo-secao:hover h2 {
+  transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carreira .titulo-secao h2 {
+    transition: none;
+  }
+}
+
+/* Movimento individual das linhas de carreira */
+.linha-do-tempo .marco {
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.linha-do-tempo .marco:hover {
+  transform: translateX(8px);
+  background-color: rgba(33, 150, 243, 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .linha-do-tempo .marco {
+    transition: none;
+  }
+
+  .linha-do-tempo .marco:hover {
+    transform: none;
+  }
+
+}
+
+ /* Rodapé: contato, links e assinatura */
+.rodape {
+  grid-template-columns: 1.4fr 1fr 1fr;
+  align-items: start;
+  gap: 48px;
+  min-height: 0;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.rodape > div:first-child::before,
+.links-rodape::before {
+  display: block;
+  margin-bottom: 16px;
+  color: #70c1ff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.rodape > div:first-child::before {
+  content: "ENTRE EM CONTATO";
+}
+
+.links-rodape::before {
+  content: "REDES E PROJETOS";
+}
+
+.rodape h2 {
+  margin: 8px 0 20px;
+}
+
+.rodape div:first-child > a {
+  overflow-wrap: anywhere;
+}
+
+.links-rodape {
+  gap: 16px;
+}
+
+.links-rodape a {
+  width: fit-content;
+  font-size: 1rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.links-rodape a:hover {
+  color: #70c1ff;
+  transform: translateX(4px);
+}
+
+.rodape > p {
+  align-self: end;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 760px) {
+  .rodape {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .rodape > p {
+    align-self: auto;
+  }
+}
+
+/* Nova posição das informações do rodapé */
+.rodape {
+  grid-template-columns: 1fr 1fr 1.4fr;
+}
+
+.rodape > p {
+  order: 1;
+}
+
+.rodape > .links-rodape {
+  order: 2;
+}
+
+.rodape > div:first-child {
+  order: 3;
+}
+
+.rodape > p strong {
+  color: #2196f3;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .rodape {
+    grid-template-columns: 1fr;
+  }
+
+  .rodape > div:first-child {
+    order: 1;
+  }
+
+  .rodape > .links-rodape {
+    order: 2;
+  }
+
+  .rodape > p {
+    order: 3;
+  }
+}
+
+/* Flutuação leve no logo AC. e no menu */
+.cabecalho .marca,
+.cabecalho nav a {
+  display: inline-block;
+}
+
+.cabecalho .marca:hover,
+.cabecalho nav a:hover {
+  animation: flutuar-menu 2.5s ease-in-out 1;
+}
+
+@keyframes flutuar-menu {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-7px);
+  }
+
+  70% {
+    transform: translateY(-3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cabecalho .marca:hover,
+  .cabecalho nav a:hover {
+    animation: none;
+  }
+}
+
+/* Textos brancos ficam cinza claro ao passar o mouse */
+:is(
+  .inicio-texto h1,
+  .inicio-lateral h2,
+  .sobre-texto h2,
+  .atuacao-titulo h2,
+  .titulo-secao h2,
+  .projetos-topo h2,
+  .cartao-conteudo h3,
+  .marco h3,
+  .tecnologias h2,
+  .rodape h2,
+  .inicio-texto p,
+  .sobre-texto p,
+  .cartao-conteudo p
+) {
+  transition: color 0.25s ease;
+}
+
+:is(
+  .inicio-texto h1,
+  .inicio-lateral h2,
+  .sobre-texto h2,
+  .atuacao-titulo h2,
+  .titulo-secao h2,
+  .projetos-topo h2,
+  .cartao-conteudo h3,
+  .marco h3,
+  .tecnologias h2,
+  .rodape h2,
+  .inicio-texto p,
+  .sobre-texto p,
+  .cartao-conteudo p
+):hover {
+  color: #bebebe;
+}
+
+/* Busto à esquerda das tecnologias */
+.tecnologias-com-avatar {
+  display: grid;
+  grid-template-columns: 520px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.avatar-tecnologias {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.avatar-animado {
+  position: relative;
+  width: 100%;
+}
+
+.avatar-animado .avatar-tecnologias {
+  display: block;
+  width: 100%;
+  height: auto;
+  animation: none;
+  transform: none;
+}
+
+.avatar-cabeca-inclinada {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  mask-image: radial-gradient(
+    ellipse 32% 30% at 49% 34%,
+    black 45%,
+    transparent 100%
+  );
+}
+
+@keyframes inclinar-cabeca {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.avatar-animado:hover .avatar-cabeca-inclinada {
+  animation: inclinar-cabeca 2.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-animado:hover .avatar-cabeca-inclinada {
+    animation: none;
+  }
+}
+
+.avatar-tecnologias {
+  transform-origin: center center;
+}
+
+.avatar-tecnologias:hover {
+  animation: virar-avatar-tecnologias 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-tecnologias:hover {
+    animation: none;
+  }
+}
+
+/* Mesma largura e alinhamento para as partes do site */
+.cabecalho,
+.inicio,
+.sobre,
+.cena-personagem,
+.atuacao,
+.carreira,
+.projetos,
+.tecnologias,
+.rodape {
+  width: min(calc(100% - 104px), 1400px);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: clamp(24px, 3vw, 48px);
+  padding-left: clamp(24px, 3vw, 48px);
+}
+
+/* Rodapé alinhado em três áreas */
+.rodape {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 40px;
+}
+
+.rodape > * {
+  min-width: 0;
+}
+
+/* Faixas estreitas de códigos nas laterais */
+body {
+  background-color: #111413;
+  background-image:
+    linear-gradient(
+      to right,
+      transparent 0 54px,
+      #111413 54px calc(100% - 54px),
+      transparent calc(100% - 54px)
+    ),
+    url("/assets/codigos-laterais.jpg");
+  background-size: 100% 100%, cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body::before { left: 0; }
+body::after  { right: 0; }
+
+@keyframes codigos-descendo {
+  from { background-position: center -270px; }
+  to   { background-position: center 0; }
+}
+
+@media (max-width: 900px) {
+  body::before,
+  body::after {
+    display: none;
+  }
+}
+
+body::before {
+  left: 0;
+}
+
+body::after {
+  right: 0;
+}
+
+/* Em telas menores, o conteúdo volta a ocupar a largura disponível */
+@media (max-width: 900px) {
+  .cabecalho,
+  .inicio,
+  .sobre,
+  .cena-personagem,
+  .atuacao,
+  .carreira,
+  .projetos,
+  .tecnologias,
+  .rodape {
+    width: 100%;
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  body::before,
+  body::after {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .rodape {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after {
+    animation: none;
+  }
+}
+
+/* Espaço entre os textos e a imagem do início */
+@media (min-width: 901px) {
+  .inicio {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: clamp(24px, 2.5vw, 48px);
+  }
+
+  .personagem-inicio {
+    width: 100%;
+    max-width: 520px;
+    margin: 0;
+    justify-self: center;
+  }
+
+  .inicio-texto h1 {
+    font-size: clamp(3rem, 4.4vw, 5.5rem);
+  }
+
+  .inicio-lateral h2 {
+    font-size: clamp(2rem, 3vw, 3.8rem);
+  }
+}
+
+/* Frase azul acima do monitor */
+.cena-personagem > p {
+  bottom: auto;
+  top: clamp(70px, 8vw, 140px);
+  right: 7vw;
+  z-index: 2;
+}
+
+@media (max-width: 760px) {
+  .cena-personagem > p {
+    top: 45px;
+    right: 20px;
+    bottom: auto;
+  }
+}
+
+.cena-personagem > p {
+  right: 12px;
+  top: 105px;
+  bottom: auto;
+  width: 460px;
+  max-width: calc(100% - 24px);
+  text-align: center;
+}
+
+/* Conteúdo mais amplo e centralizado */
+.cabecalho,
+.inicio,
+.sobre,
+.cena-personagem,
+.atuacao,
+.carreira,
+.projetos,
+.tecnologias,
+.rodape {
+  width: min(calc(100% - 120px), 1520px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Textos de leitura mais confortáveis */
+.sobre-texto p,
+.atuacao p,
+.linha-do-tempo p,
+.projetos p,
+.rodape p,
+.rodape a {
+  font-size: clamp(1rem, 1.1vw, 1.2rem);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .cabecalho,
+  .inicio,
+  .sobre,
+  .cena-personagem,
+  .atuacao,
+  .carreira,
+  .projetos,
+  .tecnologias,
+  .rodape {
+    width: 100%;
+  }
+}
+
+/* Textos menores da abertura */
+.cabecalho nav a {
+  font-size: 1rem;
+}
+
+.inicio-texto p,
+.inicio-lateral p,
+.link-destaque {
+  font-size: 1.2rem;
+}
+
+.indicacao-rolagem {
+  color: #00ffff;
+  font-size: 1rem;
+}
+
+/* Oculta somente o ponto após PROPÓSITO */
+.inicio-lateral h2 span {
+  display: none;
+}
+
+.indicacao-rolagem {
+  display: inline-block;
+  transform-origin: center;
+}
+
+.indicacao-rolagem:hover {
+  animation: balancar-rolagem 0.8s ease-in-out 2;
+}
+
+@keyframes balancar-rolagem {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  25% { transform: translateY(-4px) rotate(-2deg); }
+  50% { transform: translateY(3px) rotate(2deg); }
+  75% { transform: translateY(-2px) rotate(-1deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .indicacao-rolagem:hover {
+    animation: none;
+  }
+}
+
+/* Contato, idioma e aparência no menu */
+.cabecalho { gap: clamp(12px, 1.5vw, 28px); }
+.cabecalho nav { gap: clamp(10px, 1.15vw, 20px); }
+.cabecalho nav a { font-size: 1.08rem; white-space: nowrap; }
+.controles-cabecalho {
+  display: flex; align-items: center; gap: 12px; margin-left: auto;
+  flex-wrap: wrap; justify-content: flex-end;
+}
+.email-cabecalho { font-size: .98rem; white-space: nowrap; transition: color .2s ease; }
+.email-cabecalho:hover, .email-cabecalho:focus-visible { color: #00ffff; }
+.botoes-idioma { display: flex; border: 1px solid #66736b; border-radius: 999px; padding: 3px; }
+.botoes-idioma button, .botao-tema {
+  cursor: pointer; border: 0; background: transparent; color: inherit;
+}
+.botoes-idioma button { padding: 6px 9px; border-radius: 999px; font-size: .85rem; }
+.botoes-idioma button[aria-pressed="true"] { background: #00ffff; color: #092024; }
+.botao-tema { width: 36px; height: 36px; border: 1px solid #66736b;
+  border-radius: 50%; font-size: 1.25rem; line-height: 1; }
+.botao-tema:hover { color: #00ffff; border-color: #00ffff; }
+@media (max-width: 1350px) {
+  .cabecalho { flex-wrap: wrap; }
+  .cabecalho nav { order: 3; width: 100%; justify-content: center; }
+}
+@media (max-width: 760px) {
+  .cabecalho nav { order: 3; justify-content: flex-start; }
+  .controles-cabecalho { gap: 7px; }
+  .email-cabecalho { font-size: .78rem; }
+  .botoes-idioma button { padding: 5px 6px; }
+}
+
+/* Tema claro mantém as fotografias e as bordas azuis intactas */
+:root:has(body.tema-claro) { color: #1a2529; background: #f6f8f7; }
+body.tema-claro {
+  color: #1a2529; background-color: #f6f8f7;
+  background-image: none;
+}
+.tema-claro .cabecalho { background: #f6f8f7f0; border-color: #ced8d6; }
+.tema-claro .inicio, .tema-claro .rodape, .tema-claro .tecnologias,
+.tema-claro .cena-personagem { border-color: #cbd6d3; }
+.tema-claro .cena-personagem { background: radial-gradient(ellipse at 50% 70%, #d9e8e9, #f6f8f7 72%); }
+.tema-claro .carreira { background: #eaf0ed; }
+.tema-claro .atuacao-cards article, .tema-claro .cartao-projeto { background: #fff; color: #1a2529; }
+.tema-claro .lista-tecnologias > span { color: #1a2529; background: #fff; }
+.tema-claro .lista-tecnologias > span:hover { color: #fff; background: #087cff; }
+.tema-claro .botoes-projetos button { background: #fff; color: #1a2529; }
+.tema-claro .botoes-projetos button:hover { background: #087cff; color: #fff; }
+.tema-claro .inicio-texto p, .tema-claro .inicio-lateral p,
+.tema-claro .sobre-texto p, .tema-claro .atuacao-cards p,
+.tema-claro .titulo-secao p, .tema-claro .marco p,
+.tema-claro .local, .tema-claro .dica-projetos,
+.tema-claro .cartao-conteudo p, .tema-claro .rodape p,
+.tema-claro .numero-projeto, .tema-claro .sem-link { color: #35474d; }
+.tema-claro .projetos-topo h2 em { color: #1a2529; }
+.tema-claro .cartao-conteudo .categoria-projeto { color: #075a91 !important; }
+.tema-claro .atuacao-cards article, .tema-claro .cartao-projeto,
+.tema-claro .marco, .tema-claro .linha-do-tempo { border-color: #bbc9c7; }
+.tema-claro .botoes-idioma, .tema-claro .botao-tema { border-color: #839490; }
+.tema-claro .cena-personagem > p, .tema-claro .indicacao-rolagem { color: #007d89; }
+.tema-claro .cartao-conteudo > a, .tema-claro .atuacao-cards a { color: #075a91; }
+:root[lang="en"] .rodape > div:first-child::before { content: "GET IN TOUCH"; }
+:root[lang="en"] .links-rodape::before { content: "NETWORKS AND PROJECTS"; }
+:root[lang="es"] .rodape > div:first-child::before { content: "PONTE EN CONTACTO"; }
+:root[lang="es"] .links-rodape::before { content: "REDES Y PROYECTOS"; }
+
+
+/* Ícone dentro de cada quadrado; nome logo abaixo */
+.lista-tecnologias { align-items: start; gap: 16px 12px; }
+.lista-tecnologias > .tecnologia-item {
+  display: flex; flex-direction: column; justify-content: flex-start;
+  align-items: center; gap: 8px; width: 98px; min-width: 98px;
+  height: auto; min-height: 110px; padding: 0;
+  background: none; border: 0; box-shadow: none; color: inherit;
+}
+.lista-tecnologias > .tecnologia-item:hover {
+  background: none; border: 0; box-shadow: none; color: inherit;
+}
+.lista-tecnologias .tecnologia-icone {
+  display: grid; place-items: center; flex: none;
+  width: 70px; height: 70px; padding: 0;
+  border: 1px solid #66736b; border-radius: 50%;
+  background: #1c251f; box-shadow: none;
+}
+.lista-tecnologias .tecnologia-icone i,
+.lista-tecnologias .tecnologia-icone .tecnologia-simbolo {
+  display: inline-block; width: auto; height: auto;
+  padding: 0; border: 0; background: none;
+  font-size: 2rem; line-height: 1;
+}
+.lista-tecnologias .tecnologia-icone .tecnologia-simbolo { color: #76c5ff; }
+.lista-tecnologias .tecnologia-nome {
+  display: block; width: 100%; padding: 0;
+  border: 0; background: none; color: #cbd4cf;
+  font-size: .85rem; line-height: 1.3; white-space: normal;
+}
+.lista-tecnologias .tecnologia-item:hover .tecnologia-icone {
+  border-color: #00ffff; box-shadow: 0 0 15px #008cff;
+}
+.tema-claro .lista-tecnologias .tecnologia-icone { background: #fff; }
+.tema-claro .lista-tecnologias .tecnologia-nome { color: #35474d; }
+.tema-claro .lista-tecnologias .tecnologia-icone .devicon-github-original,
+.tema-claro .lista-tecnologias .tecnologia-icone .devicon-nextjs-plain,
+.tema-claro .lista-tecnologias .tecnologia-icone .devicon-unity-plain { color: #222; }
+
+/* Rodapé com e-mail, site, redes e assinatura separados */
+.rodape { align-items: center; gap: clamp(35px, 5vw, 85px); }
+.rodape > div:first-child::before,
+.links-rodape::before { display: none; }
+.rodape .contato-dados { display: grid; gap: 15px; }
+.rodape .contato-dado { display: grid; gap: 4px; }
+.rodape .rotulo-contato {
+  color: #70c1ff; font-size: .8rem;
+  font-weight: 700; letter-spacing: .13em;
+}
+.rodape .contato-dado a {
+  display: block; width: fit-content; font-size: 1rem;
+  text-decoration: none; overflow-wrap: anywhere;
+}
+.rodape .contato-dado a:hover, .rodape .contato-dado a:focus-visible { color: #00ffff; }
+.rodape .contato-dados p { margin: 0; }
+.rodape .assinatura-rodape { display: grid; gap: 4px; align-self: center; font-size: 1rem; }
+.rodape .assinatura-rodape strong {
+  display: block; color: #00ffff;
+  font-family: "Permanent Marker", cursive;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 400; line-height: 1.1;
+}
+.rodape .assinatura-rodape small { margin-top: 9px; font: inherit; font-size: .85rem; }
+.tema-claro .rodape .assinatura-rodape strong { color: #007d89; }
+.tema-claro .rodape .rotulo-contato { color: #075a91; }
+.rodape h2 span { color: #fff; }
+.tema-claro .rodape h2 span { color: #1a2529; }
+@media (max-width: 760px) {
+  .rodape { align-items: start; gap: 32px; }
+}
+
+
+/* Ícones sociais ao lado do rodapé */
+.rodape { position: relative; }
+.icones-sociais {
+  position: absolute; left: -43px; top: 50%;
+  transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 18px;
+}
+.icones-sociais a {
+  color: inherit; font-size: 1.4rem; line-height: 1;
+  transition: color .2s ease, transform .2s ease;
+}
+.icones-sociais a:hover, .icones-sociais a:focus-visible {
+  color: #00ffff; transform: translateY(-3px);
+}
+.tema-claro .lista-tecnologias .devicon-vercel-original { color: #222; }
+@media (max-width: 900px) {
+  .icones-sociais {
+    position: static; transform: none;
+    flex-direction: row; grid-column: 1 / -1;
+  }
+}

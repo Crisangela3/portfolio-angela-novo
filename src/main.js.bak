@@ -1,0 +1,367 @@
+﻿import "./style.css";
+
+const projetos = [
+  {
+    numero: "01",
+    nome: "OuçaPorMim",
+    tipo: "Acessibilidade · Projeto principal",
+    descricao:
+      "Aplicação que transforma voz em texto para apoiar pessoas surdas ou com deficiência auditiva no acompanhamento de aulas e conversas.",
+    tecnologias: ["Next.js", "JavaScript", "Acessibilidade"],
+    link: "https://github.com/Crisangela3/audio-assistente-pro",
+  },
+  {
+    numero: "02",
+    nome: "Nossa ONG",
+    tipo: "Site institucional · Projeto acadêmico",
+    descricao:
+      "Site responsivo com HTML semântico, CSS, JavaScript e formulário com validações. O HTML foi verificado no W3C sem erros.",
+    tecnologias: ["HTML5", "CSS3", "JavaScript"],
+    link: null,
+  },
+  {
+    numero: "03",
+    nome: "Moreli Prestige Sport",
+    tipo: "Loja virtual · Projeto de estudo",
+    descricao:
+      "Interface de loja esportiva criada para praticar componentes React, navegação, responsividade e animações.",
+    tecnologias: ["React", "Vite", "CSS"],
+    link: null,
+  },
+];
+
+const trajetoria = [
+  {
+    periodo: "2026 — atual",
+    titulo: "Engenharia de Software",
+    local: "Universidade Cruzeiro do Sul · Polo Santo André",
+    descricao: "Bacharelado iniciado em setembro de 2026.",
+  },
+  {
+    periodo: "2026",
+    titulo: "Desenvolvimento de Jogos com Unity e C#",
+    local: "SoulCode",
+    descricao: "Formação realizada de fevereiro a maio de 2026.",
+  },
+  {
+    periodo: "2025",
+    titulo: "Desenvolvimento de Software Full Stack",
+    local: "Koru · Programa Desenvolve Boticário",
+    descricao: "Formação prática realizada de julho a outubro de 2025.",
+  },
+  {
+    periodo: "2018 — atual",
+    titulo: "Professora do Ensino Fundamental",
+    local: "Secretaria da Educação do Estado de São Paulo",
+    descricao:
+      "Planejamento de atividades, uso de plataformas digitais e adaptação de conteúdos para diferentes necessidades.",
+  },
+  {
+    periodo: "2024",
+    titulo: "Professora da Primeira Infância",
+    local: "Escola Manoel Cardoso",
+    descricao: "Criação de atividades gamificadas e organização de entregas.",
+  },
+  {
+    periodo: "2014 — 2024",
+    titulo: "Pedagogia e Filosofia",
+    local: "FMU · IPEMIG",
+    descricao: "Licenciatura em Pedagogia e graduação em Filosofia.",
+  },
+];
+
+const tecnologias = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Git",
+  "GitHub",
+  "Vite",
+  "C#",
+  "Unity",
+  "VS Code",
+  "Acessibilidade",
+  "UX/UI",
+];
+
+function personagem(classe = "") {
+  return `
+    <div class="personagem ${classe}"
+      role="img"
+      aria-label="Ilustração de Angela sentada ao computador e digitando">
+      <img class="pose-frente" src="/assets/avatar-frente.png" alt="" />
+      <img class="pose-digitando" src="/assets/avatar-digitando.png" alt="" />
+    </div>
+  `;
+}
+
+document.querySelector("#app").innerHTML = `
+  <a class="pular-conteudo" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="cabecalho">
+    <a class="marca" href="#inicio" aria-label="Angela Cristina, início">
+      AC<span>.</span>
+    </a>
+
+    <nav aria-label="Menu principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#atuacao">O que faço</a>
+      <a href="#carreira">Carreira</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#tecnologias">Tecnologias</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="inicio secao" id="inicio">
+      <div class="inicio-texto">
+        <span class="escrita-azul">Olá, eu sou</span>
+        <h1>ANGELA<br /><span>CRISTINA</span></h1>
+        <p>
+          Desenvolvedora de Software Júnior<br />
+          Front-end · React · JavaScript
+        </p>
+        <a class="link-destaque" href="#projetos">
+          Conheça meus projetos ↘
+        </a>
+      </div>
+
+      ${personagem("personagem-inicio")}
+
+      <div class="inicio-lateral">
+        <span class="escrita-azul">Criar · Aprender · Incluir</span>
+        <h2>TECNOLOGIA<br />COM PROPÓSITO<span>.</span></h2>
+        <p>Santo André · SP</p>
+      </div>
+
+      <span class="indicacao-rolagem">ROLE PARA EXPLORAR ↓</span>
+    </section>
+
+    <section class="sobre secao" id="sobre">
+      <div class="sobre-texto">
+        <span class="escrita-azul">Sobre mim</span>
+        <h2>Uma trajetória que une <em>educação</em> e tecnologia.</h2>
+        <p>
+          Sou estudante de Engenharia de Software e estou em transição
+          de carreira para o desenvolvimento web. Crio interfaces
+          responsivas com atenção à acessibilidade e à experiência
+          das pessoas que vão utilizá-las.
+        </p>
+        <p>
+          Minha experiência na educação fortaleceu minha comunicação,
+          meu planejamento e meu trabalho em equipe. Hoje aplico esse
+          aprendizado em projetos de software com propósito.
+        </p>
+      </div>
+
+      ${personagem("personagem-sobre")}
+    </section>
+
+    <section class="cena-personagem">
+      ${personagem("personagem-grande")}
+      <p>Ideias que saem do papel e ganham vida na tela.</p>
+    </section>
+
+    <section class="atuacao secao" id="atuacao">
+      <div class="atuacao-titulo">
+        <span class="escrita-azul">O que eu faço</span>
+        <h2>IDEIAS,<br /><span>CÓDIGO</span><br />E IMPACTO.</h2>
+      </div>
+
+      ${personagem("personagem-atuacao")}
+
+      <div class="atuacao-cards">
+        <article>
+          <span>01</span>
+          <h3>FRONT-END</h3>
+          <p>
+            Desenvolvo páginas e interfaces responsivas com HTML,
+            CSS, JavaScript e React.
+          </p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>ACESSIBILIDADE</h3>
+          <p>
+            No OuçaPorMim, trabalho com transcrição de voz em texto
+            para apoiar a participação de pessoas surdas ou com
+            deficiência auditiva.
+          </p>
+          <a
+            href="https://github.com/Crisangela3/audio-assistente-pro"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Conhecer o projeto ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="carreira secao" id="carreira">
+      <div class="titulo-secao">
+        <span class="escrita-azul">Minha jornada</span>
+        <h2>Carreira <em>&</em><br />formação</h2>
+        <p>Da educação ao desenvolvimento de software.</p>
+      </div>
+
+      <div class="linha-do-tempo">
+        ${trajetoria
+          .map(
+            (item) => `
+              <article class="marco">
+                <span class="periodo">${item.periodo}</span>
+                <div>
+                  <h3>${item.titulo}</h3>
+                  <span class="local">${item.local}</span>
+                </div>
+                <p>${item.descricao}</p>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </section>
+
+    <section class="projetos secao" id="projetos">
+      <div class="projetos-topo">
+        <div>
+          <span class="escrita-azul">Trabalhos e estudos</span>
+          <h2>Meus <em>Projetos</em></h2>
+        </div>
+
+        <div class="botoes-projetos">
+          <button id="anterior" type="button" aria-label="Projeto anterior">
+            ←
+          </button>
+          <button id="proximo" type="button" aria-label="Próximo projeto">
+            →
+          </button>
+        </div>
+      </div>
+
+      <p class="dica-projetos">
+        Use os botões, o mouse ou as setas do teclado para ver os projetos.
+      </p>
+
+      <div
+        class="lista-projetos"
+        id="lista-projetos"
+        tabindex="0"
+        role="region"
+        aria-label="Projetos de Angela Cristina"
+      >
+        ${projetos
+          .map(
+            (projeto) => `
+              <article class="cartao-projeto">
+                <div class="capa-projeto capa-${projeto.numero}">
+                  <span>PROJETO ${projeto.numero}</span>
+                  <strong>${projeto.nome}</strong>
+                </div>
+
+                <div class="cartao-conteudo">
+                  <span class="numero-projeto">
+                    ${projeto.numero} / PROJETO
+                  </span>
+                  <h3>${projeto.nome}</h3>
+                  <p class="categoria-projeto">${projeto.tipo}</p>
+                  <p>${projeto.descricao}</p>
+
+                  <div class="etiquetas">
+                    ${projeto.tecnologias
+                      .map((tecnologia) => `<span>${tecnologia}</span>`)
+                      .join("")}
+                  </div>
+
+                  ${
+                    projeto.link
+                      ? `<a href="${projeto.link}"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                           Ver no GitHub ↗
+                         </a>`
+                      : `<span class="sem-link">Projeto de estudo</span>`
+                  }
+                </div>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </section>
+
+    <section class="tecnologias secao" id="tecnologias">
+      <span class="escrita-azul">Ferramentas que uso e estudo</span>
+      <h2>MINHAS TECNOLOGIAS</h2>
+
+      <div class="lista-tecnologias">
+        ${tecnologias
+          .map((tecnologia) => `<span>${tecnologia}</span>`)
+          .join("")}
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape secao" id="contato">
+    <div>
+      <span class="escrita-azul">Vamos conversar?</span>
+      <h2>CONTATO<span>.</span></h2>
+      <a href="mailto:crisangela3@gmail.com">
+        crisangela3@gmail.com ↗
+      </a>
+      <p>Santo André, São Paulo</p>
+    </div>
+
+    <div class="links-rodape">
+      <a
+        href="https://github.com/Crisangela3"
+        target="_blank"
+        rel="noopener noreferrer"
+      >GitHub ↗</a>
+
+      <a
+        href="https://github.com/Crisangela3/audio-assistente-pro"
+        target="_blank"
+        rel="noopener noreferrer"
+      >OuçaPorMim ↗</a>
+    </div>
+
+    <p>Feito por Angela Cristina · ${new Date().getFullYear()}</p>
+  </footer>
+`;
+
+const listaProjetos = document.querySelector("#lista-projetos");
+const cartaoProjeto = listaProjetos.querySelector(".cartao-projeto");
+
+function moverProjetos(direcao) {
+  const largura = cartaoProjeto.getBoundingClientRect().width + 20;
+
+  listaProjetos.scrollBy({
+    left: largura * direcao,
+    behavior: "smooth",
+  });
+}
+
+document
+  .querySelector("#anterior")
+  .addEventListener("click", () => moverProjetos(-1));
+
+document
+  .querySelector("#proximo")
+  .addEventListener("click", () => moverProjetos(1));
+
+listaProjetos.addEventListener("keydown", (evento) => {
+  if (evento.key === "ArrowRight") {
+    evento.preventDefault();
+    moverProjetos(1);
+  }
+
+  if (evento.key === "ArrowLeft") {
+    evento.preventDefault();
+    moverProjetos(-1);
+  }
+});
