@@ -420,7 +420,7 @@ document.querySelector("#app").innerHTML = `
         <div class="contato-dado">
           <span class="rotulo-contato">SITE</span>
           <!-- Troque o endereço abaixo pelo deste portfólio quando publicar. -->
-          <a href="https://portfolio-angela-cristina.vercel.app/" target="_blank" rel="noopener noreferrer">portfolio-angela-cristina.vercel.app ↗</a>
+          <a href="https://portfolio-angela-novo.vercel.app" target="_blank" rel="noopener noreferrer">portfolio-angela-novo.vercel.app ↗</a>
         </div>
         <p>Santo André, São Paulo</p>
       </div>
